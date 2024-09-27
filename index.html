@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha Sim ou Não</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Remove o scroll lateral */
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            position: absolute; /* Permite mover o botão "NÃO" */
+        }
+        #sim {
+            position: static; /* Botão SIM fica estático */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Você é viado?</h1>
+        <button id="nao">NÃO</button>
+        <button id="sim" >SIM</button>
+        <p id="mensagem"></p>
+    </div>
+
+    <script>
+        const botaoNao = document.getElementById('nao');
+
+        botaoNao.addEventListener('mouseover', () => {
+            const maxX = window.innerWidth - botaoNao.offsetWidth;
+            const maxY = window.innerHeight - botaoNao.offsetHeight;
+
+            const x = Math.random() * maxX;
+            const y = Math.random() * maxY;
+
+            botaoNao.style.left = `${x}px`;
+            botaoNao.style.top = `${y}px`;
+        });
+
+      const sim = document.getElementById("sim");
+      const mensagem = document.getElementById("mensagem");
+      sim.addEventListener("click", () => {
+
+        mensagem.innerHTML += "<h1>LA ELE KKKKKKKKKKKKKKKKKKKKK</h1>";
+
+      })
+    </script>
+
+</body>
+</html>
